@@ -4,7 +4,7 @@ spring:
     - dev
 
 ---
-server:
+server: 
   port: 8001 
  
 spring:
@@ -44,21 +44,21 @@ info:
   build.version: $project.version$
 
 ---
-server:
+server: 
   port: 8001 
  
-spring:
+spring: 
   profiles: test  #测试环境
-  application:
+  application: 
     name: microservicecloud-config-user-client	#对外暴露微服务名字
-  datasource:
+  datasource: 
     url: jdbc:mysql://192.168.24.138:3306/test03_springcloud02?useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     
     #打印sql
-logging:
-  level:
+logging: 
+  level: 
     com.coffee.springcloud.mapper:
       debug
    
