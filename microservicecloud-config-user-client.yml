@@ -31,7 +31,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka8761.com:8761/eureka/   单机版eureka
+      defaultZone: http://eureka8761.com:8761/eureka/   #单机版eureka
   instance:
     instance-id: user-8001		 #自定义此服务在eureka名称
     prefer-ip-address: true           #当鼠标悬浮在此服务在eureka名称时左下角会出现此服务ip（此服务唯一标识）
