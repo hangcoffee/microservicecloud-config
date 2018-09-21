@@ -3,7 +3,7 @@ spring:
     active: 
     - dev
 
---
+---
 server:
   port: 8001 
  
@@ -43,7 +43,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
---
+---
 server:
   port: 8001 
  
