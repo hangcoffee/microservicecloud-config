@@ -1,0 +1,84 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+
+--
+server:
+  port: 8001 
+ 
+spring:
+  profiles: dev   #开发环境
+  application:
+    name: microservicecloud-config-user-client	#对外暴露微服务名字
+  datasource:
+    url: jdbc:mysql://192.168.24.138:3306/test03_springcloud?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    
+    #打印sql
+logging:
+  level:
+    com.coffee.springcloud.mapper:
+      debug
+   
+   #读取sql地址   
+mybatis:
+  mapper-locations:
+    classpath:/mapper/**Mapper.xml
+    
+    #eureka注册地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/   单机版eureka
+  instance:
+    instance-id: user-8001		 #自定义此服务在eureka名称
+    prefer-ip-address: true           #当鼠标悬浮在此服务在eureka名称时左下角会出现此服务ip（此服务唯一标识）
+   
+   # 在eureka点击进入服务后设置各个服务信息   
+info: 
+  app.name: coffee-microservicecloud
+  company.name: hangCoffee@163.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+--
+server:
+  port: 8001 
+ 
+spring:
+  profiles: test  #测试环境
+  application:
+    name: microservicecloud-config-user-client	#对外暴露微服务名字
+  datasource:
+    url: jdbc:mysql://192.168.24.138:3306/test03_springcloud02?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    
+    #打印sql
+logging:
+  level:
+    com.coffee.springcloud.mapper:
+      debug
+   
+   #读取sql地址   
+mybatis:
+  mapper-locations:
+    classpath:/mapper/**Mapper.xml
+    
+    #eureka注册地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/   单机版eureka
+  instance:
+    instance-id: user-8001		 #自定义此服务在eureka名称
+    prefer-ip-address: true           #当鼠标悬浮在此服务在eureka名称时左下角会出现此服务ip（此服务唯一标识）
+   
+   # 在eureka点击进入服务后设置各个服务信息   
+info: 
+  app.name: coffee-microservicecloud
+  company.name: hangCoffee@163.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
