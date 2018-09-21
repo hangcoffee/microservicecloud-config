@@ -52,7 +52,7 @@ spring:
   application: 
     name: microservicecloud-config-user-client	#对外暴露微服务名字
   datasource: 
-    url: jdbc:mysql://192.168.24.138:3306/test03_springcloud02?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.24.138:3306/test03_springcloud03?useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     
